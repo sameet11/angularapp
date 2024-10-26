@@ -1,0 +1,29 @@
+.custom-btn{
+    border-radius: 9%;
+    background-color: rgb(42, 50, 165);
+    padding: 10px;
+}
+ 
+.navigation-bar{
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.success-message {
+    color: white;
+    margin-top: 40px;
+    font-weight: bold;
+    background-color: rgb(0, 128, 0);
+    padding: 10px 15px;
+    width: 40%;
+  }
+  .btn-custom {
+    padding: 0.375rem 0.75rem; /* Adjust padding as needed */
+    font-size: 0.875rem; /* Adjust font size as needed */
+  }
+
+  .appointment-heading{
+    text-align: center;
+  }
+
+
+  

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Prociono&display=swap');
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+
+
+
+
+/* This is for the heading like create appointment and appointment list */
+.custom-create-app{
+
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .prociono-regular {
+    font-family: "Prociono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+
+  /* Button shadow effect */
+  /* .btn-primary {
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  } */
+ 
+  .btn-primary-hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+ 
+  .btn-primary-hover:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+  }

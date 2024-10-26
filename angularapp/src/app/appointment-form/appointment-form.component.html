@@ -1,0 +1,64 @@
+
+
+<div class="custom-create-app">
+  <h2 custom-create-app prociono-regular>{{ isEditMode ? 'Edit Appointment' : 'Create Appointment' }}</h2>
+</div>
+<div class="container shadow">
+
+  <!-- <h2>{{ isEditMode ? 'Edit Appointment' : 'Create Appointment' }}</h2> -->
+  
+ 
+  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+    <!-- Patient Name -->
+    <div class="form-group">
+      <label for="patientName">Patient Name</label>
+      <input type="text" id="patientName" formControlName="patientName" class="form-control">
+      <div *ngIf="appointmentForm.get('patientName')?.invalid && appointmentForm.get('patientName')?.touched" class="text-danger">
+        Patient name is required
+      </div>
+    </div>
+      <!-- Doctor Name -->
+      <div class="form-group">
+        <label for="doctorName">Doctor Name</label>
+        <input type="text" id="doctorName" formControlName="doctorName" class="form-control">
+        <div *ngIf="appointmentForm.get('doctorName')?.invalid && appointmentForm.get('doctorName')?.touched" class="text-danger">
+          Doctor name is required
+        </div>
+      </div>
+   
+      <!-- Specialization -->
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input type="text" id="specialization" formControlName="specialization" class="form-control">
+        <div *ngIf="appointmentForm.get('specialization')?.invalid && appointmentForm.get('specialization')?.touched" class="text-danger">
+          Specialization is required
+        </div>
+      </div>
+   
+      <!-- Appointment Date -->
+      <div class="form-group">
+        <label for="appointmentDate">Appointment Date</label>
+        <input type="date" id="appointmentDate" formControlName="appointmentDate" class="form-control" [min]="minDate">
+        <div *ngIf="appointmentForm.get('appointmentDate')?.invalid && appointmentForm.get('appointmentDate')?.touched" class="text-danger">
+          Appointment date is required
+        </div>
+      </div>
+   
+      <!-- Time Slot -->
+      <div class="form-group">
+        <label for="timeSlot">Time Slot</label>
+        <input type="text" id="timeSlot" formControlName="timeSlot" class="form-control">
+        <div *ngIf="appointmentForm.get('timeSlot')?.invalid && appointmentForm.get('timeSlot')?.touched" class="text-danger">
+          Time slot is required
+        </div>
+      </div>
+   
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100" [disabled]="appointmentForm.invalid || check">Submit</button>
+   
+      <!-- Success Message -->
+      <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+</form>
+</div>
